@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <title>Users Show</title>
+    </head>
+    <body>
+        <!-- {% csrf_token %} -->
+        <h1>User {{user.id}}</h1>
+        <table class="showing">
+            <tr>                  
+                <td>Full name: {{user.first_name}} {{user.last_name}}</td>
+            </tr>
+            <tr>
+                <td>Email: {{user.email}}</td>
+            </tr>
+            <tr>
+                <td>Created at: {{user.created_at}}</td>
+            </tr>
+        </table>    
+
+        <a href="{{user.id}}/edit">Edit</a>
+        <a href="{{user.id}}/destroy">Delete</a>
+    </body>
+</html>
